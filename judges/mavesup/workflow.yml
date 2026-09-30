@@ -1,0 +1,35 @@
+nugget_class: "judges.mavesup.mavesup_judge:MaVeSupNuggetCreator"
+judge_class: "judges.mavesup.mavesup_judge:MaVeSupJudge"
+
+create_nuggets: true
+create_qrels: false
+judge: true
+
+nugget_depends_on_responses: false
+judge_uses_nuggets: true
+judge_uses_qrels: false
+qrels_uses_nuggets: false
+
+force_recreate_nuggets: false
+augment_report: false
+
+settings:
+  filebase: "mavesup"
+
+nugget_settings:
+  min_nuggets: 8
+  max_nuggets: 15
+  max_tokens: 1500
+
+judge_settings:
+  sentences_per_call: 8
+  excerpt_chars: 700
+  max_doc_chars: 20000
+  match_max_tokens: 1200
+  verify_per_call: 10
+  verify_max_tokens: 600
+  support_max_tokens: 1200
+  permutations: 3
+  on_missing_evals: "fix_aggregate"
+
+uses_llm: true
